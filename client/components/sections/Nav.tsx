@@ -10,9 +10,15 @@ export default function Nav() {
         </a>
         <a
           className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/about"
+          href="/superagent-api"
         >
-          About
+          Superagent API
+        </a>
+        <a
+          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
+          href="/fetch-api"
+        >
+          Fetch API
         </a>
         <a
           className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
