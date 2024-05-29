@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import * as db from '../db/fruits.ts'
+import checkJwt from '../auth0.ts'
 
 const router = Router()
 
@@ -38,7 +39,7 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', checkJwt, async (req, res) => {
   try {
     const { owner, name } = req.body
     await db.addFruit({ owner, name })
