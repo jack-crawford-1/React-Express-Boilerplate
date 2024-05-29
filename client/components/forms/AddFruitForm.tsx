@@ -15,7 +15,8 @@ function AddFruitForm() {
     setName('')
   }
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md">
+    <div className="bg-white p-6">
+      <h1 className="m-1 text-2xl font-bold">Add fruit to the database</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="owner" className="mb-2 block font-bold text-gray-700">
@@ -27,6 +28,7 @@ function AddFruitForm() {
             value={owner}
             onChange={(e) => setOwner(e.target.value)}
             required
+            placeholder="Enter Owner name"
             className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>
@@ -40,6 +42,7 @@ function AddFruitForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            placeholder="Enter Fruit name"
             className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>

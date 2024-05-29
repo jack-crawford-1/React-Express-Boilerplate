@@ -5,6 +5,7 @@ import SuperagentApi from './components/pages/SuperagentApi.tsx'
 import Contact from './components/pages/Contact.tsx'
 import Forms from './components/pages/Forms.tsx'
 import FetchApi from './components/pages/FetchApi.tsx'
+import About from './components/pages/About.tsx'
 
 export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
@@ -13,5 +14,6 @@ export default createRoutesFromElements(
     <Route path="fetch-api" element={<FetchApi />} />
     <Route path="contact" element={<Contact />} />
     <Route path="forms" element={<Forms />} />
+    <Route path="about" element={<About />} />
   </Route>,
 )

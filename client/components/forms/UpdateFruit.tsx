@@ -27,8 +27,8 @@ function UpdateFruitForm() {
     }
   }
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md ">
-      {' '}
+    <div className="bg-white p-6 ">
+      <h1 className="m-1 text-2xl font-bold">Update fruit name from ID</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="id" className="mb-2 block font-bold text-gray-700">
@@ -40,6 +40,7 @@ function UpdateFruitForm() {
             value={id}
             onChange={(e) => setId(e.target.value)}
             required
+            placeholder="Enter Fruit ID to update..."
             className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>
@@ -53,6 +54,7 @@ function UpdateFruitForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
+            placeholder="Enter new Fruit name"
             className="w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>

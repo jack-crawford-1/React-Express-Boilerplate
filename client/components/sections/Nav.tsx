@@ -1,38 +1,72 @@
-export default function Nav() {
+import { NavLink } from 'react-router-dom'
+
+const Nav = () => {
   return (
-    <nav className="bg-white py-4 shadow-md">
-      <div className="container mx-auto flex justify-center space-x-4">
-        <a
-          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/"
-        >
-          Home
-        </a>
-        <a
-          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/superagent-api"
-        >
-          Superagent API
-        </a>
-        <a
-          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/fetch-api"
-        >
-          Fetch API
-        </a>
-        <a
-          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/contact"
-        >
-          Contact
-        </a>
-        <a
-          className="p-2 font-semibold text-gray-700 transition duration-300 ease-in-out hover:text-blue-500"
-          href="/forms"
-        >
-          Forms
-        </a>
-      </div>
+    <nav className="bg-gray-800 p-4">
+      <ul className="flex space-x-4">
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/superagent-api"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            Superagent API
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/fetch-api"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            Fetch API
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            Contact
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/forms"
+            className={({ isActive }) =>
+              isActive ? 'text-blue-400' : 'text-white'
+            }
+          >
+            Forms
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   )
 }
+
+export default Nav
