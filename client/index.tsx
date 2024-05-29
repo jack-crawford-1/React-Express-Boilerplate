@@ -11,15 +11,12 @@ const queryClient = new QueryClient()
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
-    /**
-     * TODO: replace domain, clientId, and audience
-     */
     <Auth0Provider
-      domain=""
-      clientId=""
+      domain="tohora-24-jack.au.auth0.com"
+      clientId="PhIIhSyNS1h0ZErof8fkq4ZM5V5cQZ9Y"
       authorizationParams={{
         redirect_uri: window.location.origin,
-        audience: '',
+        audience: 'https://boilerplate/api',
       }}
     >
       <QueryClientProvider client={queryClient}>

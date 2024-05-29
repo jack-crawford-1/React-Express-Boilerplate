@@ -1,9 +1,13 @@
 import { NavLink } from 'react-router-dom'
+import SignIn from '../auth/SignIn'
 
 const Nav = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <ul className="flex space-x-4">
+        <li className="text-red-400">
+          <SignIn />
+        </li>
         <li>
           <NavLink
             to="/"
