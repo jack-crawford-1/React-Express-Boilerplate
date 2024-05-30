@@ -172,7 +172,6 @@ export default function About() {
               /sections
               <ul className="ml-5 list-inside list-disc space-y-2">
                 <li>Footer.tsx: Footer component.</li>
-                <li>Header.tsx: Header component.</li>
                 <li>Nav.tsx: Navigation bar component.</li>
               </ul>
             </li>
