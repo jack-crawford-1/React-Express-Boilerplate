@@ -39,7 +39,7 @@ router.get('/:id', async (req, res, next) => {
   }
 })
 
-router.post('/', checkJwt, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { owner, name } = req.body
     await db.addFruit({ owner, name })

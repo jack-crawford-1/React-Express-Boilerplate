@@ -20,6 +20,7 @@ function AddFruitForm() {
     addFruitMutation.mutate(newFruit)
     setOwner(user?.name || user?.nickname || '')
     setName('')
+    setOwner('')
   }
 
   return (
