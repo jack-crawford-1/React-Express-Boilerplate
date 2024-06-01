@@ -6,18 +6,16 @@ import Contact from './components/pages/Contact.tsx'
 import Forms from './components/pages/Forms.tsx'
 import FetchApi from './components/pages/FetchApi.tsx'
 import About from './components/pages/About.tsx'
-import NewForm from './components/pages/NewForm.tsx'
 import OnThisDay from './components/pages/OnThisDay.tsx'
 
 export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route index element={<App />} />
+    <Route path="about" element={<About />} />
     <Route path="superagent-api" element={<SuperagentApi />} />
     <Route path="fetch-api" element={<FetchApi />} />
-    <Route path="contact" element={<Contact />} />
-    <Route path="forms" element={<NewForm />} />
-    <Route path="about" element={<About />} />
-    <Route path="all-forms" element={<Forms />} />
     <Route path="onthisday" element={<OnThisDay />} />
+    <Route path="forms" element={<Forms />} />
+    <Route path="contact" element={<Contact />} />
   </Route>,
 )
