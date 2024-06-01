@@ -59,7 +59,8 @@ export default function OnThisDay() {
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       <h2 className="m-5 text-3xl antialiased">
-        <span className="font-extrabold">On This Day:</span> {today()}
+        <span className="font-extrabold">Wikipedia - On This Day:</span>{' '}
+        {today()}
       </h2>
       {image && (
         <div

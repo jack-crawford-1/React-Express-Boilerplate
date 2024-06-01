@@ -3,7 +3,6 @@ import superagent from 'superagent'
 import 'dotenv/config'
 
 const today = new Date()
-const year = today.getFullYear()
 const month = String(today.getMonth() + 1).padStart(2, '0')
 const day = String(today.getDate()).padStart(2, '0')
 const url = `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`
@@ -23,7 +22,7 @@ export const getOnThisDay = async (req: Request, res: Response) => {
     const data = response.body
     res.json(data)
   } catch (error) {
-    console.error('Error fetching featured article:', error)
-    res.status(500).send('Error fetching featured article')
+    console.error('Error fetching "wiki on this day" article:', error)
+    res.status(500).send('Error fetching "wiki on this day" article')
   }
 }

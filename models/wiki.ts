@@ -27,5 +27,5 @@ export interface OnThisDayModel {
 
 export interface OnThisDayResponse {
   selected: OnThisDayModel[]
-  image: Image
+  image: OnThisDayModel['image']
 }
