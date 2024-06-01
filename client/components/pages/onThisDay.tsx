@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Image, OnThisDayModel } from '../../../models/wiki'
-import { getOnThisDay } from '../../apis/wikiOnThisDay'
+import { getOnThisDay } from '../../apis/wiki'
 import Loading from '../sections/Loading'
 
 export default function OnThisDay() {

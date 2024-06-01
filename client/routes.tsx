@@ -7,7 +7,7 @@ import Forms from './components/pages/Forms.tsx'
 import FetchApi from './components/pages/FetchApi.tsx'
 import About from './components/pages/About.tsx'
 import NewForm from './components/pages/NewForm.tsx'
-import OnThisDay from './components/pages/onThisDay.tsx'
+import OnThisDay from './components/pages/OnThisDay.tsx'
 
 export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
