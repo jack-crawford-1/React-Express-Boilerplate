@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getDummyData } from '../../apis/dummyJson'
 import { Post } from '../../../models/model'
+import Loading from '../sections/Loading'
 
 export default function SuperagentApi() {
   const [data, setData] = useState<Post[]>([])
@@ -19,7 +20,11 @@ export default function SuperagentApi() {
   }, [])
 
   if (loading) {
-    return <div>Loading...</div>
+    return (
+      <div>
+        <Loading />
+      </div>
+    )
   }
 
   return (

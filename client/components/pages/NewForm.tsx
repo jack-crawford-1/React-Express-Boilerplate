@@ -10,6 +10,7 @@ import {
 import { useEffect, useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { useQueryClient } from '@tanstack/react-query'
+import Loading from '../sections/Loading'
 
 function NewForm() {
   const { isAuthenticated, user } = useAuth0()
@@ -191,7 +192,9 @@ function NewForm() {
         )}
 
         {fruitsLoading ? (
-          <div>Loading...</div>
+          <div>
+            <Loading />
+          </div>
         ) : fruitsError ? (
           <div>Error loading fruits</div>
         ) : (

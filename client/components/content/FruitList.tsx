@@ -1,9 +1,15 @@
 import { useFruits } from '../../hooks/useFruits'
+import Loading from '../sections/Loading'
 
 function FruitList() {
   const { data: fruits, error, isLoading } = useFruits()
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    )
   if (error) return <div>Error loading fruits</div>
 
   return (

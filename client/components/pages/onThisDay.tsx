@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Image, OnThisDayModel } from '../../../models/wiki'
 import { getOnThisDay } from '../../apis/wikiOnThisDay'
+import Loading from '../sections/Loading'
 
 export default function OnThisDay() {
   const [image, setImage] = useState<Image | null>(null)
@@ -31,7 +32,7 @@ export default function OnThisDay() {
   }, [])
 
   if (loading) {
-    return <p>Loading...</p>
+    return <Loading />
   }
 
   if (error) {

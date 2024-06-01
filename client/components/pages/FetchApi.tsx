@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { fetchRecipes } from '../../apis/dummyJson'
 import { Recipe } from '../../../models/model'
+import Loading from '../sections/Loading'
 
 export default function FetchApi() {
   const [data, setData] = useState<Recipe | null>(null)
@@ -19,7 +20,11 @@ export default function FetchApi() {
   }, [])
 
   if (loading) {
-    return <div>Loading...</div>
+    return (
+      <div>
+        <Loading />
+      </div>
+    )
   }
   return (
     <div className="container mx-auto p-6">
