@@ -1,25 +1,24 @@
 import { useEffect, useState } from 'react'
-import { OnThisDayModel } from '../../../models/wiki'
-
-// wiki api using superagent with env file to store access token
+import { Image, OnThisDayModel } from '../../../models/wiki'
+import { getOnThisDay } from '../../apis/wikiOnThisDay'
 
 export default function OnThisDay() {
+  const [image, setImage] = useState<Image | null>(null)
   const [onThisDay, setOnThisDay] = useState<OnThisDayModel[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    const fetchArticle = async () => {
+    const fetchOnThisDay = async () => {
       try {
-        const response = await fetch('/api/onthisday')
-        if (!response.ok) {
-          throw new Error('Failed to fetch article')
-        }
-        const data = await response.json()
-        console.log(data)
+        const data = await getOnThisDay()
 
         if (data.selected) {
           setOnThisDay(data.selected)
+        }
+
+        if (data.image) {
+          setImage(data.image)
         }
       } catch (error) {
         setError((error as Error).message)
@@ -28,7 +27,7 @@ export default function OnThisDay() {
       }
     }
 
-    fetchArticle()
+    fetchOnThisDay()
   }, [])
 
   if (loading) {
@@ -39,15 +38,49 @@ export default function OnThisDay() {
     return <p>Error: {error}</p>
   }
 
+  function today(): React.ReactNode {
+    const dateString = '06/2024'
+    const [month, year] = dateString.split('/')
+
+    const parsedMonth = parseInt(month)
+    const parsedYear = parseInt(year)
+
+    if (isNaN(parsedMonth) || isNaN(parsedYear)) {
+      console.error('Invalid date format')
+      return 'Invalid date format'
+    }
+
+    const date = new Date(parsedYear, parsedMonth - 1)
+    console.log(date.toString())
+    return date.toString()
+  }
+
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h2 className="text-bold m-5 text-3xl">
-        Wikipedia&apos;s &quot;On This Day&quot;
+      <h2 className="m-5 text-3xl antialiased">
+        <span className="font-extrabold">On This Day:</span> {today()}
       </h2>
-      <p className="m-2 pb-7">
-        Using Superagent and the wiki api with an env file to store access
-        tokens
-      </p>
+      {image && (
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            marginBottom: '20px',
+          }}
+        >
+          <img
+            src={image.source}
+            alt={image.title}
+            style={{ maxWidth: '200px', marginRight: '20px' }}
+          />
+          <div>
+            <h3 dangerouslySetInnerHTML={{ __html: image.title }} />
+            <p
+              dangerouslySetInnerHTML={{ __html: image.description.html || '' }}
+            />
+          </div>
+        </div>
+      )}
       {onThisDay.length > 0 ? (
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
           {onThisDay.map((event, index) => (

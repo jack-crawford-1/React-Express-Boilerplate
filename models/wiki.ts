@@ -21,4 +21,11 @@ export interface Image {
 export interface OnThisDayModel {
   text: string
   year: number
+  image: Image
+  selected: boolean
+}
+
+export interface OnThisDayResponse {
+  selected: OnThisDayModel[]
+  image: Image
 }
