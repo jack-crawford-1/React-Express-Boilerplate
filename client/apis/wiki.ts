@@ -1,12 +1,12 @@
 import request from 'superagent'
-import { OnThisDayModel } from '../../models/wiki'
+import { OnThisDayResponse } from '../../models/wiki'
 
-export async function getOnThisDay(): Promise<OnThisDayModel[]> {
+export async function getOnThisDay(): Promise<OnThisDayResponse> {
   try {
-    const response = await request.get('api/v1/onthisday')
-    return response.body as OnThisDayModel[]
+    const response = await request.get('/api/v1/onthisday')
+    return response.body as OnThisDayResponse
   } catch (error) {
     console.error('Error fetching data:', error)
-    return []
+    throw error
   }
 }

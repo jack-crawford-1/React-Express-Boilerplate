@@ -18,14 +18,36 @@ export interface Image {
   }
 }
 
+export interface Page {
+  content_urls: {
+    desktop: { page: string }
+    mobile: { page: string }
+  }
+  coordinates: {
+    lat: number
+    lon: number
+  }
+  description: string
+  extract_html: string
+  source: string
+  thumbnail: {
+    source: string
+    width: number
+    height: number
+  }
+  title: string
+  timestamp: string
+  type: string
+}
+
 export interface OnThisDayModel {
   text: string
   year: number
-  image: Image
+  pages: Page[]
   selected: boolean
 }
 
 export interface OnThisDayResponse {
   selected: OnThisDayModel[]
-  image: OnThisDayModel['image']
+  image: OnThisDayModel['pages'][0]['thumbnail']
 }
