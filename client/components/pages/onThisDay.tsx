@@ -3,7 +3,7 @@ import { OnThisDayModel, OnThisDayResponse } from '../../../models/wiki'
 import { getOnThisDay } from '../../apis/wiki'
 import Loading from '../sections/Loading'
 
-const placeholderImage = '../../../../../public/images/imageNotFound.jpeg'
+const placeholderImage = '/images/imageNotFound.jpeg'
 
 function transformTitle(title: string): string {
   return title.replace(/([a-z0-9])([A-Z])/g, '$1 $2').replace(/_/g, ' ')
