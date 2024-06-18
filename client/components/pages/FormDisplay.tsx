@@ -12,7 +12,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { useQueryClient } from '@tanstack/react-query'
 import Loading from '../sections/Loading'
 
-export function NewForm() {
+export function FormDisplay() {
   const { isAuthenticated, user } = useAuth0()
   const addFruitMutation = useAddFruit()
   const deleteFruitMutation = useDeleteFruit()
@@ -290,4 +290,4 @@ export function NewForm() {
   )
 }
 
-export default NewForm
+export default FormDisplay

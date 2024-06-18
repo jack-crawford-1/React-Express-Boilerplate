@@ -1,9 +1,9 @@
-import NewForm from './NewForm'
+import Home from '../pages/Home'
 
 function App() {
   return (
     <div>
-      <NewForm />
+      <Home />
     </div>
   )
 }
