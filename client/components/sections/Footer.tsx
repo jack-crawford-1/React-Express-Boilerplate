@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="mt-10 bg-gray-800 py-6 text-white">
       <div className="container mx-auto text-center">
-        <p>&copy; Jack Crawford {year}</p>
+        <p>Jack Crawford {year}</p>
         <a
           href="#top"
           className="mt-2 inline-block text-blue-400 hover:underline"
