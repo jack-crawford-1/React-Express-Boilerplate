@@ -68,16 +68,6 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to="/onthisday"
-              className={({ isActive }) =>
-                isActive ? 'text-blue-400' : 'text-white'
-              }
-            >
-              WikiAPI w/env
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? 'text-blue-400' : 'text-white'
