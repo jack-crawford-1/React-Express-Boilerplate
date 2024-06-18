@@ -38,16 +38,6 @@ const Nav = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? 'text-blue-400' : 'text-white'
-              }
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
               to="/superagent-api"
               className={({ isActive }) =>
                 isActive ? 'text-blue-400' : 'text-white'
@@ -64,16 +54,6 @@ const Nav = () => {
               }
             >
               Fetch API
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                isActive ? 'text-blue-400' : 'text-white'
-              }
-            >
-              Contact
             </NavLink>
           </li>
           <li>
