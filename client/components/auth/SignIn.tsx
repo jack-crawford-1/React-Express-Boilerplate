@@ -15,26 +15,19 @@ export default function SignIn() {
     loginWithRedirect()
   }
 
-  const handleProfileClick = () => {
-    setShowProfile(!showProfile)
-  }
-
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      handleProfileClick()
-    }
-  }
-
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !(dropdownRef.current as HTMLElement).contains(event.target as Node)
+      ) {
         setShowProfile(false)
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('click', handleClickOutside)
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('click', handleClickOutside)
     }
   }, [dropdownRef])
 
@@ -43,7 +36,7 @@ export default function SignIn() {
       <div className="sign-in-container flex items-center space-x-4">
         <IfNotAuthenticated>
           <button
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 md:text-gray-200 md:hover:bg-gray-600 md:hover:text-white"
             onClick={handleSignIn}
           >
             Sign in
@@ -57,10 +50,6 @@ export default function SignIn() {
                   className="user-image h-10 w-10 cursor-pointer rounded-full"
                   src={user.picture}
                   alt="User"
-                  // onClick={handleProfileClick}
-                  onKeyDown={handleKeyDown}
-                  role="button"
-                  tabIndex={0}
                   aria-label="User Profile"
                 />
                 {showProfile && (
@@ -81,7 +70,7 @@ export default function SignIn() {
             )}
           </div>
           <button
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 md:text-gray-700 md:hover:bg-gray-600 md:hover:text-white"
             onClick={handleSignOut}
           >
             Sign out

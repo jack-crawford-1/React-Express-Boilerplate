@@ -8,11 +8,14 @@ export default function Layout() {
     <>
       <header>
         {/* <Nav /> */}
+
         <NavCustom />
       </header>
-      <main>
-        <Outlet />
-      </main>
+      <div className="pt-20">
+        <main>
+          <Outlet />
+        </main>
+      </div>
       <footer>
         <Footer />
       </footer>
