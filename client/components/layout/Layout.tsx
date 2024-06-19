@@ -1,24 +1,27 @@
-import { Outlet } from 'react-router-dom'
-// import Nav from '../sections/Nav'
+import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../sections/Footer'
-import NavCustom from '../sections/NavCustom'
+import Nav from '../sections/Nav'
 
 export default function Layout() {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
+
   return (
     <>
       <header>
-        {/* <Nav /> */}
-
-        <NavCustom />
+        <Nav />
       </header>
       <div className="pt-20">
         <main>
           <Outlet />
         </main>
       </div>
-      <footer>
-        <Footer />
-      </footer>
+
+      {!isHomePage && (
+        <footer>
+          <Footer />
+        </footer>
+      )}
     </>
   )
 }

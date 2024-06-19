@@ -12,8 +12,8 @@ const queryClient = new QueryClient()
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
     <Auth0Provider
-      domain="tohora-24-jack.au.auth0.com"
-      clientId="PhIIhSyNS1h0ZErof8fkq4ZM5V5cQZ9Y"
+      domain="web-app-demo.au.auth0.com"
+      clientId="AeHMiDBP07yjgVcdOpLnvnLg0nbwHR3l"
       authorizationParams={{
         redirect_uri: window.location.origin,
         audience: 'https://boilerplate/api',
