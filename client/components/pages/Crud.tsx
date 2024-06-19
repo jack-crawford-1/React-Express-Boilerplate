@@ -98,7 +98,7 @@ export default function Demo() {
 
   return (
     <div>
-      <section className="bg-white md:bg-gray-100">
+      <section className="bg-white md:bg-gray-900">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
           <div className="mb-8 rounded-lg border border-gray-200 bg-gray-800 p-8 md:p-12 dark:border-gray-700">
             <a
@@ -116,7 +116,7 @@ export default function Demo() {
               Express application.
             </p>
             <a
-              href="/"
+              href="/code-examples"
               className="inline-flex items-center text-lg font-medium text-blue-600 hover:underline dark:text-blue-500"
             >
               See Code Examples

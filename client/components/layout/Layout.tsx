@@ -7,19 +7,20 @@ export default function Layout() {
   const isHomePage = location.pathname === '/'
   const isDemoPage = location.pathname === '/demo'
   const isCrudPage = location.pathname === '/crud'
+  const isCode = location.pathname === '/code-examples'
 
   return (
     <>
       <header>
         <Nav />
       </header>
-      <div className="pt-20">
+      <div className="pt-20 md:pt-10 ">
         <main>
           <Outlet />
         </main>
       </div>
 
-      {!isHomePage && !isDemoPage && !isCrudPage && (
+      {!isHomePage && !isDemoPage && !isCrudPage && !isCode && (
         <footer>
           <Footer />
         </footer>

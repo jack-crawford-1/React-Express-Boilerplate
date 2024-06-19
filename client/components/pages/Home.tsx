@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div>
-      <section className="min-h-screen bg-white">
+      <section className="min-h-screen bg-gray-300">
         <div className="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8 lg:py-16 xl:gap-0">
           <div className="mr-auto place-self-center text-left text-center lg:col-span-7">
             <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
@@ -12,14 +12,14 @@ export default function Home() {
               application with built-in authentication, API integrations, and
               database management.
             </p>
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-center">
               <a
                 href="https://github.com/jack-crawford-1/React-Express-Boilerplate"
-                className="y-700 ray-700 inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"
+                className="y-700 ray-700 inline-flex items-center justify-center rounded-lg border border-gray-300 bg-gray-900 px-5 py-3 text-center text-base font-medium text-gray-100 hover:bg-gray-700  focus:ring-4 focus:ring-gray-100"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                See GitHub Repo
+                Get GitHub Template
               </a>
             </div>
           </div>

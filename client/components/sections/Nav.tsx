@@ -163,6 +163,16 @@ export default function Nav() {
             </li>
             <li>
               <NavLink
+                to="/code-examples"
+                className={({ isActive }) =>
+                  isActive ? 'text-blue-400' : 'text-white'
+                }
+              >
+                Code examples
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/superagent-api"
                 className={({ isActive }) =>
                   isActive ? 'text-blue-400' : 'text-white'
