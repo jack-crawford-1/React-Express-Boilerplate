@@ -153,12 +153,12 @@ export default function Nav() {
           <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-800 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:border-gray-700 md:bg-gray-800 md:p-0 rtl:space-x-reverse">
             <li>
               <NavLink
-                to="/formdisplay"
+                to="/crud"
                 className={({ isActive }) =>
                   isActive ? 'text-blue-400' : 'text-white'
                 }
               >
-                Forms Display
+                C.R.U.D
               </NavLink>
             </li>
             <li>
@@ -179,16 +179,6 @@ export default function Nav() {
                 }
               >
                 Fetch API
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/forms"
-                className={({ isActive }) =>
-                  isActive ? 'text-blue-400' : 'text-white'
-                }
-              >
-                Forms
               </NavLink>
             </li>
           </ul>

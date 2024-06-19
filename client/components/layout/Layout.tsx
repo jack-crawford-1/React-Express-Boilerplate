@@ -5,6 +5,8 @@ import Nav from '../sections/Nav'
 export default function Layout() {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
+  const isDemoPage = location.pathname === '/demo'
+  const isCrudPage = location.pathname === '/crud'
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function Layout() {
         </main>
       </div>
 
-      {!isHomePage && (
+      {!isHomePage && !isDemoPage && !isCrudPage && (
         <footer>
           <Footer />
         </footer>

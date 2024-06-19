@@ -1,8 +1,15 @@
 # React / Express Boilerplate: Fullstack 
 
+
+
 This **full-stack app boilerplate** leverages modern technologies and best practices to provide a robust foundation for building web applications. The project includes authentication setup using **Auth0** and features well-structured **API endpoints** for both server-side functionality and external data fetching. Internal routes handle server-side logic and responses, while external routes use **fetch** and **superagent** to retrieve data from **third-party APIs**.
 
+
+
 The integration of a **SQLite database** ensures smooth data management and storage. The project also supports easy deployment with a **Procfile** and **Dockerfile** already configured. The file structure is organised, **separating concerns** across client and server directories, with clear divisions for components, hooks, styles, routes, models, controllers, middleware, and database interactions. This structure enhances maintainability and scalability, making it an ideal starting point for full-stack application development.
+
+
+![alt text](public/images/homepage.png)
 
 
 ## Tech Stack
@@ -39,6 +46,8 @@ The integration of a **SQLite database** ensures smooth data management and stor
 - Procfile: For deploying applications to Heroku
 - Dockerfile: For containerising the application
 
-![alt text](public/images/api.png)
 
-![alt text](public/images/forms.png)
+
+![alt text](public/images/crud.png)
+
+![alt text](public/images/fetchapi.png)
