@@ -1,7 +1,7 @@
 export default function CodeExamples() {
   return (
     <>
-      <section className="bg-gray-900">
+      <section className="bg-gray-800">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
           <h1 className="mb-8 text-3xl font-extrabold text-white md:text-5xl">
             Code Snippets: CRUD Operations

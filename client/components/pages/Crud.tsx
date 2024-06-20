@@ -98,19 +98,13 @@ export default function Demo() {
 
   return (
     <div>
-      <section className="bg-white md:bg-gray-900">
+      <section className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
           <div className="mb-8 rounded-lg border border-gray-200 bg-gray-800 p-8 md:p-12 dark:border-gray-700">
-            <a
-              href="/"
-              className="mb-2 inline-flex items-center rounded-md bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-gray-700 dark:text-blue-400"
-            >
-              overview
-            </a>
-            <h1 className="mb-2 text-3xl font-extrabold text-gray-900 md:text-5xl dark:text-white">
+            <h1 className="mb-2 text-3xl font-extrabold text-white">
               CRUD functionality with Knex and SQLite3
             </h1>
-            <p className="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-6 text-lg font-normal text-gray-200 ">
               This project demonstrates how to perform CRUD (Create, Read,
               Update, Delete) operations using Knex and SQLite3 in a full-stack
               Express application.
@@ -150,13 +144,7 @@ export default function Demo() {
                         onSubmit={handleAddSubmit}
                         className="bg-gray-800 p-1 "
                       >
-                        <a
-                          href="/"
-                          className="mb-2 inline-flex items-center rounded-md bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800 dark:bg-gray-700 dark:text-purple-400"
-                        >
-                          forms
-                        </a>
-                        <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+                        <h2 className="mb-2 text-3xl font-extrabold text-white">
                           Add to database
                         </h2>
                         <div className="mb-4">
@@ -270,14 +258,8 @@ export default function Demo() {
 
             {/* database*/}
 
-            <div className="rounded-lg  bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
-              <a
-                href="/"
-                className="mb-2 inline-flex items-center rounded-md bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400"
-              >
-                database
-              </a>
-              <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+            <div className="rounded-lg  bg-gray-50 bg-gray-800 p-8 md:p-12 dark:border-gray-700">
+              <h2 className="mb-2 text-3xl font-extrabold text-white">
                 Edit Database Entries
               </h2>
               <div className="w-full p-3">
