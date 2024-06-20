@@ -79,7 +79,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Retrieving data from the Database
               </h2>
-              <div className="max-w-sm md:max-w-xl">
+              <div className="max-w-md md:max-w-xl">
                 <SyntaxHighlighter
                   language="typescript"
                   style={stackoverflowDark}
@@ -101,7 +101,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Inserting new data
               </h2>
-              <div className="max-w-sm md:max-w-xl">
+              <div className="max-w-md md:max-w-xl">
                 <SyntaxHighlighter
                   language="typescript"
                   style={stackoverflowDark}
@@ -124,7 +124,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Managing data with React Query
               </h2>
-              <div className="max-w-sm md:max-w-xl">
+              <div className="max-w-md md:max-w-xl">
                 <SyntaxHighlighter
                   language="typescript"
                   style={stackoverflowDark}
@@ -146,7 +146,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Form Handling for data addition
               </h2>
-              <div className="max-w-sm md:max-w-xl">
+              <div className="max-w-md md:max-w-xl">
                 <SyntaxHighlighter
                   language="javascript"
                   style={stackoverflowDark}
