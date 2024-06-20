@@ -1,3 +1,68 @@
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
+const fetchCode = `
+import { Request, Response } from 'express';
+import * as db from '../db/fruits.ts';
+
+export async function getFruits(req: Request, res: Response) {
+  try {
+    const fruits = await db.getAllFruits();
+    res.json(fruits);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching fruits' });
+  }
+}
+`
+
+const addCode = `
+import { Request, Response } from 'express';
+import * as db from '../db/fruits.ts';
+
+export async function addFruit(req: Request, res: Response) {
+  try {
+    const { owner, name } = req.body;
+    await db.addFruit({ owner, name });
+    res.status(201).send();
+  } catch (error) {
+    res.status(500).json({ message: 'Error adding fruit' });
+  }
+}
+`
+
+const reactQueryCode = `
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { addFruit, getFruits } from '../apis/fruits.ts';
+
+export function useFruits() {
+  return useQuery({ queryKey: ['fruits'], queryFn: getFruits });
+}
+
+export function useAddFruit() {
+  const queryClient = useQueryClient();
+  return useMutation(addFruit, {
+    onSuccess: () => queryClient.invalidateQueries('fruits'),
+  });
+}
+`
+
+const formHandlingCode = `
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  setLoading(true);
+  try {
+    await addFruitMutation.mutateAsync({ owner, name });
+    setMessage('Fruit added successfully!');
+    setName('');
+    setOwner(user?.name || user?.nickname || '');
+  } catch (error) {
+    setMessage('Failed to add fruit.');
+  } finally {
+    setLoading(false);
+  }
+};
+`
+
 export default function CodeExamples() {
   return (
     <>
@@ -14,21 +79,12 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Retrieving data from the Database
               </h2>
-              <pre className="mb-2 overflow-auto rounded-md bg-gray-900 p-4 text-white">
-                <code className="whitespace-pre-wrap">
-                  {`import { Request, Response } from 'express';
-import * as db from '../db/fruits.ts';
-
-export async function getFruits(req: Request, res: Response) {
-  try {
-    const fruits = await db.getAllFruits();
-    res.json(fruits);
-  } catch (error) {
-    res.status(500).json({ message: 'Error fetching fruits' });
-  }
-}`}
-                </code>
-              </pre>
+              <SyntaxHighlighter
+                language="typescript"
+                style={stackoverflowDark}
+              >
+                {fetchCode}
+              </SyntaxHighlighter>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function fetches all fruits from the database and returns
                 them as a JSON response. If an error occurs, it sends a 500
@@ -43,22 +99,12 @@ export async function getFruits(req: Request, res: Response) {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Inserting new data
               </h2>
-              <pre className="mb-2 overflow-auto rounded-md bg-gray-900 p-4 text-white">
-                <code className="whitespace-pre-wrap">
-                  {`import { Request, Response } from 'express';
-import * as db from '../db/fruits.ts';
-
-export async function addFruit(req: Request, res: Response) {
-  try {
-    const { owner, name } = req.body;
-    await db.addFruit({ owner, name });
-    res.status(201).send();
-  } catch (error) {
-    res.status(500).json({ message: 'Error adding fruit' });
-  }
-}`}
-                </code>
-              </pre>
+              <SyntaxHighlighter
+                language="typescript"
+                style={stackoverflowDark}
+              >
+                {addCode}
+              </SyntaxHighlighter>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function adds a new fruit to the database. It receives the
                 fruits owner and name from the request body and saves it. On
@@ -74,23 +120,12 @@ export async function addFruit(req: Request, res: Response) {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Managing data with React Query
               </h2>
-              <pre className="mb-2 overflow-auto rounded-md bg-gray-900 p-4 text-white">
-                <code className="whitespace-pre-wrap">
-                  {`import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { addFruit, getFruits } from '../apis/fruits.ts';
-
-export function useFruits() {
-  return useQuery({ queryKey: ['fruits'], queryFn: getFruits });
-}
-
-export function useAddFruit() {
-  const queryClient = useQueryClient();
-  return useMutation(addFruit, {
-    onSuccess: () => queryClient.invalidateQueries('fruits'),
-  });
-}`}
-                </code>
-              </pre>
+              <SyntaxHighlighter
+                language="typescript"
+                style={stackoverflowDark}
+              >
+                {reactQueryCode}
+              </SyntaxHighlighter>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This custom hook uses React Query to fetch and add fruits. It
                 includes queries to fetch fruits and a mutation to add a new
@@ -105,24 +140,12 @@ export function useAddFruit() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Form Handling for data addition
               </h2>
-              <pre className="mb-2 overflow-auto rounded-md bg-gray-900 p-4 text-white">
-                <code className="whitespace-pre-wrap">
-                  {`const handleSubmit = async (event) => {
-  event.preventDefault();
-  setLoading(true);
-  try {
-    await addFruitMutation.mutateAsync({ owner, name });
-    setMessage('Fruit added successfully!');
-    setName('');
-    setOwner(user?.name || user?.nickname || '');
-  } catch (error) {
-    setMessage('Failed to add fruit.');
-  } finally {
-    setLoading(false);
-  }
-};`}
-                </code>
-              </pre>
+              <SyntaxHighlighter
+                language="javascript"
+                style={stackoverflowDark}
+              >
+                {formHandlingCode}
+              </SyntaxHighlighter>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function handles the form submission. It prevents the
                 default form submission, creates a new fruit object with the
