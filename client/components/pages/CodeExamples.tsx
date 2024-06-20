@@ -69,7 +69,7 @@ export default function CodeExamples() {
       <section className="bg-gray-800">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
           <h1 className="mb-8 text-3xl font-extrabold text-white md:text-5xl">
-            Code Snippets: CRUD Operations
+            Code: CRUD Operations
           </h1>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">

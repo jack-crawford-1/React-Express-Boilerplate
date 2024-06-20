@@ -105,13 +105,15 @@ export default function Demo() {
               CRUD functionality with Knex and SQLite3
             </h1>
             <p className="mb-6 text-lg font-normal text-gray-200 ">
-              This project demonstrates how to perform CRUD (Create, Read,
-              Update, Delete) operations using Knex and SQLite3 in a full-stack
-              Express application.
+              This project showcases how to perform CRUD (Create, Read, Update,
+              Delete) operations using Knex and SQLite3 in a full-stack Express
+              application. It includes examples of adding new entries to the
+              database, as well as editing and deleting existing entries with
+              real-time updates and authentication
             </p>
             <a
               href="/code-examples"
-              className="inline-flex items-center text-lg font-medium text-blue-600 hover:underline dark:text-blue-500"
+              className="inline-flex items-center text-lg font-medium text-blue-400 hover:underline dark:text-blue-500"
             >
               See Code Examples
               <svg
@@ -144,9 +146,16 @@ export default function Demo() {
                         onSubmit={handleAddSubmit}
                         className="bg-gray-800 p-1 "
                       >
-                        <h2 className="mb-2 text-3xl font-extrabold text-white">
+                        <h2 className="mb-2 pb-1 text-3xl font-extrabold text-white">
                           Add to database
                         </h2>
+                        <p className=" mb-6 text-lg font-normal text-gray-200 ">
+                          For logged in user&apos;s, the owner&apos;s name field
+                          is automatically populated using the useAuth0 hook.
+                          Uses the useEffect hook to set the owner&apos;s name
+                          when the component mounts, ensuring the owner field
+                          reflects the current user&apos;s name.
+                        </p>
                         <div className="mb-4">
                           <label
                             htmlFor="owner"
@@ -183,7 +192,7 @@ export default function Demo() {
                         </div>
                         <button
                           type="submit"
-                          className="w-full rounded-md bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                          className="mt-3 w-full rounded-md bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-400"
                           disabled={loading}
                         >
                           {loading ? 'Adding...' : 'Add Fruit'}
@@ -262,12 +271,19 @@ export default function Demo() {
               <h2 className="mb-2 text-3xl font-extrabold text-white">
                 Edit Database Entries
               </h2>
+              <p className=" mb-6 text-lg font-normal text-gray-200 ">
+                Uses custom hooks for mutation and deletion of the existing
+                data. When the form is submitted, the mutation is triggered,
+                updating or deleting the fruit in the database and refreshing
+                the fruit list. Ensure&apos;s that users are authenticated
+                before allowing any changes.
+              </p>
               <div className="w-full p-3">
                 <ul className="m-2 mt-6 space-y-4 rounded-lg bg-white p-6 shadow-md">
                   {fruits?.map((fruit) => (
                     <li
                       key={fruit.id}
-                      className="rounded-lg bg-gray-100 p-4 shadow-sm hover:bg-gray-200"
+                      className="duration rounded-lg bg-gray-100 p-4 shadow-sm transition hover:bg-gray-300 "
                     >
                       {selectedFruitId === fruit.id ? (
                         <form
