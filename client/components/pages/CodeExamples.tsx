@@ -72,11 +72,11 @@ export default function CodeExamples() {
             Code Snippets: CRUD Operations
           </h1>
           <div className="grid gap-8 md:grid-cols-2">
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
-              <div className="mb-2 inline-flex items-center rounded-md bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800 dark:bg-gray-700 dark:text-purple-400">
+            <div className="rounded-lg border border-gray-200 bg-white p-8 md:p-12 dark:border-gray-700">
+              <div className="mb-2 inline-flex items-center rounded-md bg-purple-500 px-2.5 py-0.5 text-xs font-medium text-purple-200">
                 Fetch
               </div>
-              <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+              <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Retrieving data from the Database
               </h2>
               <div className="max-w-sm md:max-w-xl">
@@ -87,18 +87,18 @@ export default function CodeExamples() {
                   {fetchCode}
                 </SyntaxHighlighter>
               </div>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+              <p className="pt-4 text-lg font-normal text-gray-500">
                 This function fetches all fruits from the database and returns
                 them as a JSON response. If an error occurs, it sends a 500
                 status with an error message.
               </p>
             </div>
 
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
-              <div className="mb-2 inline-flex items-center rounded-md bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400">
+            <div className="rounded-lg border border-gray-200 bg-white p-8 md:p-12 dark:border-gray-700 ">
+              <div className="mb-2 inline-flex items-center rounded-md bg-green-700 px-2.5 py-0.5 text-xs font-medium text-green-200">
                 Add
               </div>
-              <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+              <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Inserting new data
               </h2>
               <div className="max-w-sm md:max-w-xl">
@@ -109,7 +109,7 @@ export default function CodeExamples() {
                   {addCode}
                 </SyntaxHighlighter>
               </div>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+              <p className="pt-4 text-lg font-normal text-gray-500">
                 This function adds a new fruit to the database. It receives the
                 fruits owner and name from the request body and saves it. On
                 success, it sends a 201 status; otherwise, it sends a 500 status
@@ -117,11 +117,11 @@ export default function CodeExamples() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
-              <div className="mb-2 inline-flex items-center rounded-md bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-gray-700 dark:text-blue-400">
+            <div className="rounded-lg border border-gray-200 bg-white p-8 md:p-12 dark:border-gray-700 ">
+              <div className="mb-2 inline-flex items-center rounded-md bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-200 dark:bg-gray-700">
                 Query
               </div>
-              <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+              <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Managing data with React Query
               </h2>
               <div className="max-w-sm md:max-w-xl">
@@ -132,18 +132,18 @@ export default function CodeExamples() {
                   {reactQueryCode}
                 </SyntaxHighlighter>
               </div>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+              <p className="pt-4 text-lg font-normal text-gray-500">
                 This custom hook uses React Query to fetch and add fruits. It
                 includes queries to fetch fruits and a mutation to add a new
                 fruit, with automatic cache invalidation.
               </p>
             </div>
 
-            <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
-              <div className="mb-2 inline-flex items-center rounded-md bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-gray-700 dark:text-yellow-400">
+            <div className="rounded-lg border border-gray-200 bg-white p-8 md:p-12 dark:border-gray-700 ">
+              <div className="mb-2 inline-flex items-center rounded-md bg-yellow-300 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
                 Submit
               </div>
-              <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
+              <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Form Handling for data addition
               </h2>
               <div className="max-w-sm md:max-w-xl">
@@ -154,7 +154,7 @@ export default function CodeExamples() {
                   {formHandlingCode}
                 </SyntaxHighlighter>
               </div>
-              <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
+              <p className="pt-4 text-lg font-normal text-gray-500">
                 This function handles the form submission. It prevents the
                 default form submission, creates a new fruit object with the
                 owner and name, submits the new fruit using addFruitMutation,
