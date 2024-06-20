@@ -21,9 +21,7 @@ export default function Layout() {
       </div>
 
       {!isHomePage && !isDemoPage && !isCrudPage && !isCode && (
-        <footer>
-          <Footer />
-        </footer>
+        <footer>{/* <Footer /> */}</footer>
       )}
     </>
   )

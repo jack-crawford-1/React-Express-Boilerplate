@@ -69,7 +69,7 @@ export default function CodeExamples() {
       <section className="bg-gray-800">
         <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
           <h1 className="mb-8 text-3xl font-extrabold text-white md:text-5xl">
-            Code: CRUD Operations
+            Code Snippets: CRUD Operations
           </h1>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg border border-gray-200 bg-gray-50 p-8 md:p-12 dark:border-gray-700 dark:bg-gray-800">
@@ -79,12 +79,14 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Retrieving data from the Database
               </h2>
-              <SyntaxHighlighter
-                language="typescript"
-                style={stackoverflowDark}
-              >
-                {fetchCode}
-              </SyntaxHighlighter>
+              <div className="max-w-sm md:max-w-xl">
+                <SyntaxHighlighter
+                  language="typescript"
+                  style={stackoverflowDark}
+                >
+                  {fetchCode}
+                </SyntaxHighlighter>
+              </div>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function fetches all fruits from the database and returns
                 them as a JSON response. If an error occurs, it sends a 500
@@ -99,12 +101,14 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Inserting new data
               </h2>
-              <SyntaxHighlighter
-                language="typescript"
-                style={stackoverflowDark}
-              >
-                {addCode}
-              </SyntaxHighlighter>
+              <div className="max-w-sm md:max-w-xl">
+                <SyntaxHighlighter
+                  language="typescript"
+                  style={stackoverflowDark}
+                >
+                  {addCode}
+                </SyntaxHighlighter>
+              </div>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function adds a new fruit to the database. It receives the
                 fruits owner and name from the request body and saves it. On
@@ -120,12 +124,14 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Managing data with React Query
               </h2>
-              <SyntaxHighlighter
-                language="typescript"
-                style={stackoverflowDark}
-              >
-                {reactQueryCode}
-              </SyntaxHighlighter>
+              <div className="max-w-sm md:max-w-xl">
+                <SyntaxHighlighter
+                  language="typescript"
+                  style={stackoverflowDark}
+                >
+                  {reactQueryCode}
+                </SyntaxHighlighter>
+              </div>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This custom hook uses React Query to fetch and add fruits. It
                 includes queries to fetch fruits and a mutation to add a new
@@ -140,12 +146,14 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900 dark:text-white">
                 Form Handling for data addition
               </h2>
-              <SyntaxHighlighter
-                language="javascript"
-                style={stackoverflowDark}
-              >
-                {formHandlingCode}
-              </SyntaxHighlighter>
+              <div className="max-w-sm md:max-w-xl">
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={stackoverflowDark}
+                >
+                  {formHandlingCode}
+                </SyntaxHighlighter>
+              </div>
               <p className="text-lg font-normal text-gray-500 dark:text-gray-400">
                 This function handles the form submission. It prevents the
                 default form submission, creates a new fruit object with the

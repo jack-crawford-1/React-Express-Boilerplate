@@ -104,12 +104,12 @@ export default function Demo() {
             <h1 className="mb-2 text-3xl font-extrabold text-white">
               CRUD functionality with Knex and SQLite3
             </h1>
-            <p className="mb-6 text-lg font-normal text-gray-200 ">
+            <p className="mb-6 text-lg font-normal text-gray-200">
               This project showcases how to perform CRUD (Create, Read, Update,
               Delete) operations using Knex and SQLite3 in a full-stack Express
               application. It includes examples of adding new entries to the
               database, as well as editing and deleting existing entries with
-              real-time updates and authentication
+              real-time updates and authentication.
             </p>
             <a
               href="/code-examples"
@@ -134,27 +134,25 @@ export default function Demo() {
             </a>
           </div>
 
-          {/* Form*/}
-
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg border-gray-700 bg-gray-800 p-8 md:p-12 dark:bg-gray-800">
-              <div className="flex justify-center ">
+              <div className="flex justify-center">
                 <div className="w-full bg-white">
                   {isAuthenticated ? (
                     <>
                       <form
                         onSubmit={handleAddSubmit}
-                        className="bg-gray-800 p-1 "
+                        className="bg-gray-800 p-1"
                       >
                         <h2 className="mb-2 pb-1 text-3xl font-extrabold text-white">
                           Add to database
                         </h2>
-                        <p className=" mb-6 text-lg font-normal text-gray-200 ">
-                          For logged in user&apos;s, the owner&apos;s name field
-                          is automatically populated using the useAuth0 hook.
-                          Uses the useEffect hook to set the owner&apos;s name
-                          when the component mounts, ensuring the owner field
-                          reflects the current user&apos;s name.
+                        <p className="mb-6 text-lg font-normal text-gray-200">
+                          For logged in users, the owner's name field is
+                          automatically populated using the useAuth0 hook. Uses
+                          the useEffect hook to set the owner's name when the
+                          component mounts, ensuring the owner field reflects
+                          the current user's name.
                         </p>
                         <div className="mb-4">
                           <label
@@ -265,25 +263,23 @@ export default function Demo() {
               </div>
             </div>
 
-            {/* database*/}
-
-            <div className="rounded-lg  bg-gray-50 bg-gray-800 p-8 md:p-12 dark:border-gray-700">
+            <div className="rounded-lg bg-gray-50 bg-gray-800 p-8 md:p-12 dark:border-gray-700">
               <h2 className="mb-2 text-3xl font-extrabold text-white">
                 Edit Database Entries
               </h2>
-              <p className=" mb-6 text-lg font-normal text-gray-200 ">
+              <p className="mb-6 text-lg font-normal text-gray-200">
                 Uses custom hooks for mutation and deletion of the existing
                 data. When the form is submitted, the mutation is triggered,
                 updating or deleting the fruit in the database and refreshing
-                the fruit list. Ensure&apos;s that users are authenticated
-                before allowing any changes.
+                the fruit list. Ensure's that users are authenticated before
+                allowing any changes.
               </p>
               <div className="w-full p-3">
                 <ul className="m-2 mt-6 space-y-4 rounded-lg bg-white p-6 shadow-md">
                   {fruits?.map((fruit) => (
                     <li
                       key={fruit.id}
-                      className="duration rounded-lg bg-gray-100 p-4 shadow-sm transition hover:bg-gray-300 "
+                      className="duration rounded-lg bg-gray-100 p-4 shadow-sm transition hover:bg-gray-300"
                     >
                       {selectedFruitId === fruit.id ? (
                         <form
@@ -328,8 +324,8 @@ export default function Demo() {
                           </button>
                         </form>
                       ) : (
-                        <div className="flex items-center justify-between">
-                          <div>
+                        <div className="flex flex-col items-center justify-between space-y-2 sm:flex-row sm:space-y-0">
+                          <div className="flex-grow">
                             <div className="text-lg font-semibold">
                               {fruit.name}
                             </div>
@@ -339,7 +335,7 @@ export default function Demo() {
                             <div className="text-gray-600">ID: {fruit.id}</div>
                           </div>
                           {isAuthenticated && (
-                            <div>
+                            <div className="flex space-x-2">
                               <button
                                 className="rounded bg-gray-800 px-2 py-2 text-white hover:bg-blue-600"
                                 onClick={() => {
@@ -350,7 +346,7 @@ export default function Demo() {
                                 Edit
                               </button>
                               <button
-                                className="ml-2 rounded bg-gray-500 px-2 py-2 text-white hover:bg-red-600"
+                                className="rounded bg-gray-500 px-2 py-2 text-white hover:bg-red-600"
                                 onClick={() => handleDelete(fruit.id)}
                                 disabled={isDeleting}
                               >
