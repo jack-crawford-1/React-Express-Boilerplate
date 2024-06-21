@@ -1,5 +1,5 @@
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const fetchCode = `
 import { Request, Response } from 'express';
@@ -66,8 +66,8 @@ const handleSubmit = async (event) => {
 export default function CodeExamples() {
   return (
     <>
-      <section className="bg-gray-800">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 lg:py-16">
+      <section className="xs:max-w-[320px] bg-gray-800 md:max-w-full">
+        <div className="max-w-screen mx-auto min-w-fit px-4 py-8 lg:py-16">
           <h1 className="mb-8 text-3xl font-extrabold text-white md:text-5xl">
             Code Snippets: CRUD Operations
           </h1>
@@ -79,15 +79,12 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Retrieving data from the Database
               </h2>
-              <div className="max-w-md md:max-w-xl">
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={stackoverflowDark}
-                >
+              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+                <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {fetchCode}
                 </SyntaxHighlighter>
               </div>
-              <p className="pt-4 text-lg font-normal text-gray-500">
+              <p className=" pt-4 text-lg font-normal text-gray-500 ">
                 This function fetches all fruits from the database and returns
                 them as a JSON response. If an error occurs, it sends a 500
                 status with an error message.
@@ -101,11 +98,8 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Inserting new data
               </h2>
-              <div className="max-w-md md:max-w-xl">
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={stackoverflowDark}
-                >
+              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+                <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {addCode}
                 </SyntaxHighlighter>
               </div>
@@ -124,11 +118,8 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Managing data with React Query
               </h2>
-              <div className="max-w-md md:max-w-xl">
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={stackoverflowDark}
-                >
+              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+                <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {reactQueryCode}
                 </SyntaxHighlighter>
               </div>
@@ -146,11 +137,8 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Form Handling for data addition
               </h2>
-              <div className="max-w-md md:max-w-xl">
-                <SyntaxHighlighter
-                  language="javascript"
-                  style={stackoverflowDark}
-                >
+              <div className=" min-w-xsw-fit max-w-xs md:max-w-xl">
+                <SyntaxHighlighter language="javascript" style={atomOneDark}>
                   {formHandlingCode}
                 </SyntaxHighlighter>
               </div>
