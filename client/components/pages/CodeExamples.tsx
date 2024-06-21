@@ -66,8 +66,8 @@ const handleSubmit = async (event) => {
 export default function CodeExamples() {
   return (
     <>
-      <section className="xs:max-w-[320px] bg-gray-800 md:max-w-full">
-        <div className="max-w-screen mx-auto min-w-fit px-4 py-8 lg:py-16">
+      <section className="bg-gray-800">
+        <div className="flex flex-col items-center justify-center p-5">
           <h1 className="mb-8 text-3xl font-extrabold text-white md:text-5xl">
             Code Snippets: CRUD Operations
           </h1>
@@ -79,7 +79,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Retrieving data from the Database
               </h2>
-              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+              <div className=" flex max-w-[300px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
                 <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {fetchCode}
                 </SyntaxHighlighter>
@@ -98,7 +98,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Inserting new data
               </h2>
-              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+              <div className=" flex max-w-[300px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
                 <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {addCode}
                 </SyntaxHighlighter>
@@ -118,7 +118,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Managing data with React Query
               </h2>
-              <div className=" flex max-w-[250px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
+              <div className=" flex max-w-[300px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
                 <SyntaxHighlighter language="typescript" style={atomOneDark}>
                   {reactQueryCode}
                 </SyntaxHighlighter>
@@ -137,7 +137,7 @@ export default function CodeExamples() {
               <h2 className="mb-2 text-3xl font-extrabold text-gray-900">
                 Form Handling for data addition
               </h2>
-              <div className=" min-w-xsw-fit max-w-xs md:max-w-xl">
+              <div className=" flex max-w-[300px] flex-row sm:max-w-md sm:p-0 md:max-w-xl">
                 <SyntaxHighlighter language="javascript" style={atomOneDark}>
                   {formHandlingCode}
                 </SyntaxHighlighter>
