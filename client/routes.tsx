@@ -7,6 +7,7 @@ import FetchApi from './components/pages/FetchApi.tsx'
 import Crud from './components/pages/Crud.tsx'
 import Demo from './components/pages/Demo.tsx'
 import CodeExamples from './components/pages/CodeExamples.tsx'
+import Profile from './components/pages/Profile.tsx'
 
 export default createRoutesFromElements(
   <Route path="/" element={<Layout />}>
@@ -16,6 +17,7 @@ export default createRoutesFromElements(
     <Route path="fetch-api" element={<FetchApi />} />
     <Route path="forms" element={<Forms />} />
     <Route path="code-examples" element={<CodeExamples />} />
+    <Route path="profile" element={<Profile />} />
     <Route path="demo" element={<Demo />} />
   </Route>,
 )
