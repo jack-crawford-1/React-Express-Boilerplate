@@ -5,6 +5,8 @@ This full-stack boilerplate for React applications demonstrates complete CRUD (C
 
 The frontend leverages React for building the user interface, with TypeScript for type safety. Styling is managed with Tailwind CSS, and the application integrates tanstack/react-query for efficient server state management and data fetching. External API data is retrieved using fetch and superagent.
 
+Deployed to: https://boilerplate.pushed.nz/
+
 
 ![alt text](public/images/homepage.png)
 
